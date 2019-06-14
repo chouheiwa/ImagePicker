@@ -1,40 +1,16 @@
 PODS:
-  - Cache (4.0.2):
-    - SwiftHash (~> 2.0.0)
-  - Hue (3.0.0)
-  - ImagePicker (3.1.0)
-  - Imaginary (3.0.0):
-    - Cache (~> 4.0)
-  - Lightbox (2.0.0):
-    - Hue (~> 3.0)
-    - Imaginary (~> 3.0)
-  - SwiftHash (2.0.0)
+  - ImagePicker (3.1.1)
 
 DEPENDENCIES:
-  - Hue
   - ImagePicker (from `../../`)
-  - Lightbox
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Cache
-    - Hue
-    - Imaginary
-    - Lightbox
-    - SwiftHash
 
 EXTERNAL SOURCES:
   ImagePicker:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  Cache: 363b6899cee63c82ccbd291e64a6c202abc17a88
-  Hue: b8fe1e43eef13631331eebecb2198b68e2622f95
-  ImagePicker: db1fd7626337b2577c523bef5f499bbbe5a37079
-  Imaginary: 2765d293d425cbed3b07fa11642554cbaebe913d
-  Lightbox: 83ec9f4aba4c79fc7bb9bcd263386df9969f09bb
-  SwiftHash: d2e09b13495447178cdfb8e46e54a5c46f15f5a9
+  ImagePicker: 3fd75b54f4ba6622ba363d88e4fe211ed59d924e
 
-PODFILE CHECKSUM: 702c1e0df019fe44ce740e86904dd384d55aefbe
+PODFILE CHECKSUM: 6176d6c8b69a275c80e3582d7b4315de157f6f9d
 
 COCOAPODS: 1.7.1
