@@ -3,6 +3,7 @@ Pod::Spec.new do |s|
   s.summary          = "Reinventing the way ImagePicker works."
   s.version          = "3.1.2"
   s.homepage         = "https://github.com/hyperoslo/ImagePicker"
+  s.swift_version    = '5'
   s.license          = 'MIT'
   s.author           = { "Hyper Interaktiv AS" => "ios@hyper.no", "chouheiwa" => "849131492@qq.com" }
   s.source           = { :git => "https://github.com/chouheiwa/ImagePicker.git", :tag => s.version.to_s }
