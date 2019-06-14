@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ImagePicker
+import CHWImagePicker
 
 class ViewController: UIViewController, ImagePickerDelegate {
 
@@ -16,11 +16,11 @@ class ViewController: UIViewController, ImagePickerDelegate {
         
     }
     @IBAction func showPicker(_ sender: Any) {
-        let imagePickerController = ImagePickerController()
-        imagePickerController.delegate = self
+        let imagePickerController = CHWImagePickerController(doneButtonDidPressHandler: { (controller,value) in
+            
+        })
         imagePickerController.imageLimit = 1
         present(imagePickerController, animated: true, completion: nil)
-
     }
 
     func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
