@@ -27,30 +27,30 @@ public class CHWImagePickerController: ImagePickerController {
     }
   }
 
-  let chwDelegate = CHWImagePickerControllerDelegate()
+  let chwObject = CHWImagePickerControllerDelegate()
 
   var wrapperDidPressHandler: (([UIImage]) -> Void)? {
-    get{
-      return chwDelegate.wrapperDidPressHandler
+    get {
+      return chwObject.wrapperDidPressHandler
     }
-    set{
-      chwDelegate.wrapperDidPressHandler = newValue
+    set {
+      chwObject.wrapperDidPressHandler = newValue
     }
   }
   var doneButtonDidPressHandler: (([UIImage]) -> Void)? {
-    get{
-      return chwDelegate.doneButtonDidPressHandler
+    get {
+      return chwObject.doneButtonDidPressHandler
     }
-    set{
-      chwDelegate.doneButtonDidPressHandler = newValue
+    set {
+      chwObject.doneButtonDidPressHandler = newValue
     }
   }
   var cancelButtonDidPressHandler: (() -> Void)? {
-    get{
-      return chwDelegate.cancelButtonDidPressHandler
+    get {
+      return chwObject.cancelButtonDidPressHandler
     }
-    set{
-      chwDelegate.cancelButtonDidPressHandler = newValue
+    set {
+      chwObject.cancelButtonDidPressHandler = newValue
     }
   }
 
@@ -58,9 +58,17 @@ public class CHWImagePickerController: ImagePickerController {
                        wrapperDidPressHandler: (([UIImage]) -> Void)? = nil,
                        doneButtonDidPressHandler: (([UIImage]) -> Void)? = nil,
                        cancelButtonDidPressHandler: (() -> Void)? = nil) {
+    super.init(configuration: configuration)
     self.wrapperDidPressHandler = wrapperDidPressHandler
     self.doneButtonDidPressHandler = doneButtonDidPressHandler
     self.cancelButtonDidPressHandler = cancelButtonDidPressHandler
+  }
+
+  public required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+  }
+
+  @objc public required init(configuration: Configuration = Configuration()) {
     super.init(configuration: configuration)
   }
 }
