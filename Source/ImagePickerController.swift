@@ -3,7 +3,6 @@ import MediaPlayer
 import Photos
 
 @objc public protocol ImagePickerDelegate: NSObjectProtocol {
-
   func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage])
   func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage])
   func cancelButtonDidPress(_ imagePicker: ImagePickerController)
@@ -278,7 +277,6 @@ open class ImagePickerController: UIViewController {
       configuration.doneButtonTitle : configuration.cancelButtonTitle
     bottomContainer.doneButton.setTitle(title, for: UIControl.State())
   }
-  
   @objc func dismissIfNeeded() {
     // If only one image is requested and a push occures, automatically dismiss the ImagePicker
     if imageLimit == 1 {
