@@ -17,7 +17,7 @@ class ViewController: UIViewController, ImagePickerDelegate {
     }
     @IBAction func showPicker(_ sender: Any) {
         let imagePickerController = CHWImagePickerController(doneButtonDidPressHandler: { (controller,value) in
-            
+            controller.dismiss(animated: true, completion: nil)
         })
         imagePickerController.imageLimit = 1
         present(imagePickerController, animated: true, completion: nil)

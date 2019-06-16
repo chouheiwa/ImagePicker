@@ -235,7 +235,7 @@ open class ImagePickerController: UIViewController {
 
     NotificationCenter.default.addObserver(self,
                                            selector: #selector(dismissIfNeeded),
-                                           name: NSNotification.Name(rawValue: ImageStack.Notifications.imageDidDrop),
+                                           name: NSNotification.Name(rawValue: ImageStack.Notifications.imageDidPush),
                                            object: nil)
 
     NotificationCenter.default.addObserver(self,
@@ -280,7 +280,9 @@ open class ImagePickerController: UIViewController {
   @objc func dismissIfNeeded() {
     // If only one image is requested and a push occures, automatically dismiss the ImagePicker
     if imageLimit == 1 {
-      doneButtonDidPress()
+        if stack.assets.count == 1 {
+            doneButtonDidPress()
+        }
     }
   }
 
